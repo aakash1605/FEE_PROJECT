@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="#" id="closeBtn">&times; Close</a>
+        <a href="#" id="addProductLink">Add Product</a>
+        <a href="#" id="showProductLink">Show Product</a>
+    </div>
+    <div class="content">
+        <span class="menu-icon" id="menuIcon" onclick="openSidebar()">&#9776;</span>
+        <div class="container" id="productsContainer">
+            <h1>Admin Dashboard</h1>
+            <form id="addForm">
+                <label for="itemName">Product Name</label>
+                <input type="text" id="itemName" required placeholder="Enter your product name">
+                <label for="itemId">Product ID</label>
+                <input type="text" id="itemId" required placeholder="Enter your product ID">
+                <label for="itemQuantity">Quantity</label>
+                <input type="number" id="itemQuantity" required placeholder="Enter your product quantity">
+                <label for="itemPrice">Product Price</label>
+                <input type="number" id="itemPrice" required placeholder="Enter your product price">
+                <button type="submit" class="btn">Add Item</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th class="action-column">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList">  
+                </tbody>
+            </table>
+            
+            <p class="no-items-message">Nothing to show yet!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
